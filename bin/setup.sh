@@ -1,13 +1,17 @@
 # This will download the required sqlite4java source for the ARM device and compile it to form a working dynamoDB 
 
 echo "downloading sqlite4java and dynamoDB.....>"
+
+mkdir dynamoDB
+cd dynamoDB
+
 wget https://storage.googleapis.com/google-code-archive-source/v2/code.google.com/sqlite4java/source-archive.zip >/dev/null
 
 wget https://raw.github.com/SpatialInteractive/sqlite4java-custom/master/custom/swig/sqlite_wrap.c >/dev/null
 
 wget https://s3.eu-central-1.amazonaws.com/dynamodb-local-frankfurt/dynamodb_local_latest.tar.gz >/dev/null
 
-tar -xvf ./dynamodb_local_latest.tar.gz >/dev/null
+tar -xf ./dynamodb_local_latest.tar.gz 
 
 unzip ./source-archive.zip 
 
