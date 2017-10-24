@@ -1,0 +1,10 @@
+#!/bin/bash
+
+cd /home/pi/projects/Bostin.DynamoDB/dynamoDB
+
+
+java -Djava.library.path=./DynamoDBLocal_lib -jar ./DynamoDBLocal.jar -sharedDb -inMemory &
+
+
+
+
