@@ -69,7 +69,8 @@ echo "[Unit]                                                        "> $SVC_TMP
 echo "Description = Bostin Technology DynamoDB Service              ">>$SVC_TMP
 echo "                                                              ">>$SVC_TMP
 echo "[Service]                                                     ">>$SVC_TMP
-echo "ExecStart = " $INSTALLDIR +"/run_DynDB.sh                     ">>$SVC_TMP
+INSTALLDIR="ExecStart="$INSTALLDIR"/run_DynDB.sh"
+echo $INSTALLDIR                                                     >>$SVC_TMP
 echo "                                                              ">>$SVC_TMP
 echo "[Install]                                                     ">>$SVC_TMP
 echo "WantedBy = multi-user.target                                  ">>$SVC_TMP
