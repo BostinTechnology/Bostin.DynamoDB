@@ -79,7 +79,7 @@ done
 sudo systemctl daemon-reload
 
 echo "Enabling services"
-enabled_services="webcam-ghy99"
+enabled_services="Bostin.DynamoDB"
 for service in $enabled_services; do
   sudo systemctl enable "$service"
   sudo systemctl start "$service"
