@@ -1,0 +1,12 @@
+[Unit]
+Description=Bostin Technology DynamoDB service
+After=syslog.target
+
+[Service]
+Type=simple
+ExecStart={{directory}}/Bostin.DynamoDB
+WorkingDirectory={{directory}}
+
+
+[Install]
+WantedBy=multi-user.target
