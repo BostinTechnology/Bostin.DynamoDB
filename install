@@ -27,7 +27,7 @@
 echo "************************************************"
 echo "Downloading sqlite4java and dynamoDB.....>"
 
-INSTALLDIR=`pwd`
+source_dir="$(cd $(dirname ${BASH_SOURCE[0]}) && pwd)"
 
 mkdir dynamoDB
 cd dynamoDB
@@ -64,7 +64,6 @@ cp libsqlite4java-linux-arm.so ../../DynamoDBLocal_lib/
 
 echo " Done.  Now configuring DynamoDB as a system service"
 
-source_dir="$(cd $(dirname ${BASH_SOURCE[0]}) && pwd)"
 cd "$source_dir"
 
 
